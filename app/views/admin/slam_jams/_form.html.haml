@@ -1,0 +1,17 @@
+= simple_form_for @slam_jam,
+                  url: admin_slam_jams_submit_url(@slam_jam) do |f|
+  = f.input :title
+  = f.input :artist
+  = f.input :youtube_id, label: 'YouTube ID'
+  = f.input :img_url, label: 'Artist image URL'
+  = f.input :approved
+  = f.submit class: 'save-btn'
+
+.show-slam-jam
+  - if @slam_jam.youtube_id.present?
+    .youtube-embed
+      = embed_youtube(@slam_jam.youtube_id)
+
+  - if @slam_jam.img_url.present?
+    .artist-image
+      = image_tag(@slam_jam.img_url)

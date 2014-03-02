@@ -1,0 +1,2 @@
+module SlamJamsHelper
+end

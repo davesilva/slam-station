@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: slam_station_development
+  pool: 5
+  username: <%= ENV['USER'] %>
+  password:
+  min_messages: warning
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: slam_station_test
+  pool: 5
+  username: <%= ENV['USER'] %>
+  password:
+  min_messages: warning

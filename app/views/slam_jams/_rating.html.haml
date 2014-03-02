@@ -1,0 +1,10 @@
+.row
+  .col-md-6
+    = form_for :slam_jam, :remote => true, :url => like_slam_path(:id => slam_jam.id) do |f|
+      = f.hidden_field :liked, :value => !current_or_guest_user.likes?(slam_jam)
+      = f.submit "Rock it!", :id => "like_button", :class => [("active" if current_or_guest_user.likes?(slam_jam)), 'btn', 'btn-success']
+
+  .col-md-6
+    = form_for :slam_jam, :remote => true, :url => dislike_slam_path(:id => slam_jam.id) do |f|
+      = f.hidden_field :disliked, :value => !current_or_guest_user.dislikes?(slam_jam)
+      = f.submit "Drop it!", :id => "dislike_button", :class => [("active" if current_or_guest_user.dislikes?(slam_jam)), 'btn', 'btn-danger']

@@ -1,0 +1,87 @@
+.admin-panel {
+  @extend .panel, .panel-default;
+
+  .heading {
+    @extend .panel-heading;
+  }
+
+  .body {
+    @extend .panel-body;
+  }
+
+  .edit-btn {
+    @extend .btn, .btn-primary, .btn-sm;
+  }
+
+  .destroy-btn {
+    @extend .btn, .btn-danger, .btn-sm;
+  }
+
+  .new-btn, .save-btn {
+    @extend .btn, .btn-primary, .btn-lg;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  table {
+    @extend .table, .table-bordered, .table-hover;
+
+    tr:first-child {
+      @extend .active;
+    }
+  }
+
+  .approved {
+    @extend .success;
+  }
+
+  // Form
+
+  .control-group {
+    @include make-row();
+    @extend .form-group;
+  }
+
+  .control-label {
+    @include make-md-column(2);
+  }
+
+  .controls {
+    @include make-md-column(6);
+
+    input[type=text], input[type=url] {
+      @extend .form-control;
+    }
+  }
+
+  .error {
+    @extend .has-error;
+  }
+
+  .help-inline {
+    @extend .help-block;
+  }
+
+  .show-slam-jam {
+    @include make-row();
+  }
+
+  .artist-image {
+    @include make-md-column(6);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .youtube-embed {
+    @include make-md-column(6);
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+}

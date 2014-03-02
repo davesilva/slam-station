@@ -1,0 +1,18 @@
+.admin-panel
+  .heading
+    %h1 Slam Jams
+
+  .body
+    = link_to 'Add a Slam Jam', new_admin_slam_jam_path,
+                                class: 'new-btn'
+
+    %table
+      %tr
+        %th Title
+        %th Artist
+        %th Youtube ID
+        %th Artist Image URL
+        %th
+        %th
+
+      = render @slam_jams

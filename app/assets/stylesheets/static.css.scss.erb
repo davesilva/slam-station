@@ -1,0 +1,78 @@
+html { 
+  height: 100%;
+  background-color: #000000;;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+#main_content {
+  background-color: #000000;
+}
+
+.hidden {
+  display: none;
+}
+
+.full_size_image {
+  z-index: 1000;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.slam_slider_left {
+  left: -50%;
+  background: url(<%= asset_path 'barkley/barkley-half-size.png' %>) repeat center center; 
+  background-size: cover;
+}
+
+.slam_slider_right {
+  right: -50%;
+  background: green;
+  background-size: cover;
+}
+
+a {
+  &#slam_link {
+    display:inline-block;
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+
+    &:hover {
+	text-decoration: none;
+    }
+  }
+
+  &.slam_now {
+    background-image: url(<%= asset_path 'basketball/basketball-wikipedia-1-slam.png' %>)
+ }
+
+  &.jam_now {
+    background-image: url(<%= asset_path 'basketball/basketball-wikipedia-1-jam.png' %>)
+  }
+}
+
+div#slam_jam_video {
+  display: none;
+  height: 360px;
+  margin-top: 50px;
+}
+
+#like_button.active{
+  color: #FFD700;
+}
+
+#dislike_button.active{
+  color: #FFD700;
+}

@@ -1,0 +1,20 @@
+%tr{class: ('approved' if slam_jam.approved?)}
+  %td= slam_jam.title
+  %td= slam_jam.artist
+  %td
+    = link_to slam_jam.youtube_id,
+              "http://youtube.com/watch?v=#{slam_jam.youtube_id}",
+              target: '_blank'
+  %td
+    = link_to truncate(slam_jam.img_url),
+              slam_jam.img_url,
+              target: '_blank'
+
+  %td.action
+    = link_to 'Edit', edit_admin_slam_jam_path(slam_jam),
+                      class: 'edit-btn'
+  %td.action
+    = link_to 'Destroy', admin_slam_jam_path(slam_jam),
+                         method: :delete,
+                         data: { confirm: 'Are you sure?' },
+                         class: 'destroy-btn'

@@ -1,0 +1,3 @@
+<%= ga_track_event('slam_jam', 'slam', @slam_jam.title) %>
+
+$('#slam_jam_video').html("<%= escape_javascript(render @slam_jam) %>");

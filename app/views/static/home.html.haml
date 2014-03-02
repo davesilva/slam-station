@@ -1,0 +1,13 @@
+.slam_slider_left.full_size_image.open_half
+.slam_slider_right.full_size_image.open_half
+#main_content.container
+  %img#loading_image.hidden
+
+  - if @slam_jam.present? 
+    #slam_jam_video.text-center
+      #yt_player
+    .text-center.btn-lg
+      %a#slam_link.slam_now{:href => '#'}
+  - else 
+    .error 
+      There are no slams available at this time. Come back in a few hours.
